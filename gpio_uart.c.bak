@@ -121,27 +121,3 @@ void UART_IO_TxProcess(vu8 *buff,vu8 size)//发送数据
         WByte(buff[i]);
     }
 }
-
-
-void main (void)
-{
-   Timer2_Init();
-   Timer4_Init();
-   Uart_IO_GPIO_Init();
-   IO_INT_INITIAL();
-   while(1)
-   {
-        if(B_uart_500ms)//每500ms发送一次询问数据，并等待接收
-        {
-            B_uart_500ms=0;
-            UART_IO_TxProcess(Txbuff,Txsize);
-        }
-        UART_IO_RxProcess(Rxbuff,Rxsize);//必须在while(1)里面一直运行，等待接收
- 
-        if(B_Rx_decode)//接收到的数据正确
-        {
-            B_Rx_decode=0;
-            //对数据进行处理
-        }
-    }
-}
