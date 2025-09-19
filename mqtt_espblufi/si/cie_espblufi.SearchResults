@@ -1,0 +1,6 @@
+---- ui_state.rev_wifi_info Matches (5 in 3 files) ----
+Cie_smartconfig.c (c:\users\44193\esp\v5.3.2\esp-idf\cie_espblufi\main):278:    if((ui_state.rev_wifi_style == 0) && ((ui_state.rev_wifi_info == true) || (ui_state.wifi_state.ssid_pw_change_flag== true)))  //手动配网
+Cie_state.c (c:\users\44193\esp\v5.3.2\esp-idf\cie_espblufi\main):148:				if(ui_state.rev_wifi_info == true) 
+Cie_state.c (c:\users\44193\esp\v5.3.2\esp-idf\cie_espblufi\main):170:		if((ui_state.rev_wifi_info == true) && (ui_state.wifi_state.connect_flag == DISABLE_0)) //接收到wifi信息，未联网的情况下
+Cie_state.c (c:\users\44193\esp\v5.3.2\esp-idf\cie_espblufi\main):173:			ui_state.rev_wifi_info = false;       	
+Cie_uart.c (c:\users\44193\esp\v5.3.2\esp-idf\cie_espblufi\main):326:			ui_state.rev_wifi_info = true;
